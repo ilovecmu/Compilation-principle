@@ -1,0 +1,177 @@
+{
+int
+ID: x
+;
+int
+ID: y
+;
+int
+ID: a
+;
+int
+ID: b
+;
+if
+(
+true
+)
+ID: a
+=
+NUM: 0
+if
+(
+false
+)
+ID: x
+=
+NUM: 0
+if
+(
+ID: a
+<
+ID: b
+)
+ID: a
+=
+ID: b
+;
+if
+(
+ID: x
+<=ID: y
+)
+ID: x
+=
+ID: y
+;
+if
+(
+ID: a
+
+ID: b
+)
+ID: a
+=
+ID: b
+;
+if
+(
+ID: x
+!=ID: y
+)
+ID: x
+=
+ID: y
+;
+if
+(
+ID: a
+>=ID: b
+)
+ID: b
+=
+ID: a
+;
+if
+(
+ID: x
+>
+ID: y
+)
+ID: y
+=
+ID: x
+;
+if
+(
+ID: a
+
+ID: b
+)
+;
+if
+(
+ID: x
+<
+NUM: 100
+||ID: x
+>
+NUM: 200
+)
+ID: x
+=
+NUM: 0
+if
+(
+ID: a
+<
+NUM: 100
+&&ID: a
+>
+NUM: 200
+)
+ID: b
+=
+NUM: 0
+if
+(
+ID: x
+<
+NUM: 100
+||(
+ID: x
+>
+NUM: 200
+&&ID: x
+!=ID: y
+)
+)
+ID: x
+=
+NUM: 0
+if
+(
+ID: a
+<
+NUM: 100
+||(
+ID: a
+>
+NUM: 200
+&&ID: a
+!=NUM: 150
+||ID: a
+!=NUM: 0
+)
+ID: a
+=
+NUM: 0
+if
+(
+ID: x
+>
+NUM: 200
+&&ID: x
+!=ID: b
+||ID: x
+<
+NUM: 100
+)
+ID: x
+=
+NUM: 0
+if
+(
+ID: a
+<
+NUM: 100
+||ID: a
+>
+NUM: 200
+&&ID: a
+!=ID: b
+)
+ID: a
+=
+NUM: 0
+}
