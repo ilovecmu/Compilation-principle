@@ -1,10 +1,15 @@
 #ifndef __TOKEN__H
 #define __TOKEN__H
+#define TOKEN_F	0
+#define TOKEN_I 1
+#define TOKEN_S 2
+
 struct Token{
 	int tag;
 	float value_f;
 	int value_i;
 	char * value_s;
+	//int type;
 };
 
 enum{

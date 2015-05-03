@@ -7,4 +7,8 @@ struct Stmt * assign();
 struct Expr *term() ;
 struct Expr * factor();
 struct Stmt *stmts();
+struct Expr *rel();
+struct Stmt * logical();
+struct Stmt *stmt();
+
 #endif
