@@ -1,0 +1,16 @@
+{
+        int x; int y; bool r;
+
+	x= x+1;
+        r = !(x < y);
+
+	r = !!(x == y);
+
+	if(x==y) r=true;
+	if( !(x > y) ) r = true;
+	else r = false;
+
+	if( !!(x != y) ) r = true;
+	else r = false;
+
+}

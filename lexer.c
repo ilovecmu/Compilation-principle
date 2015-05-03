@@ -221,7 +221,7 @@ struct Token* scan(){
 
 #if 0
 int main(int argc,char *argv[]){
-	readFile("block1.t");
+	readFile("expr3.t");
 	struct Token *tok;
 	while(tok= scan()){
 		if(tok->tag == NUM){ printf("NUM: %d\r\n",tok->value_i);}
