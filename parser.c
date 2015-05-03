@@ -16,7 +16,7 @@ struct TokenList *topEnv = &env[0];
 int envId =-1;
 int label =0;
 
-#if 0
+#if 1
 #undef log
 #define log 
 #endif
@@ -76,55 +76,6 @@ void printTag(struct Expr *exp){
 		break;
 	}
 }
-struct Expr* exprreduce(struct Expr *exp){
-	printf("%s\r\n",__func__);
-	struct Expr * e1,*e2;
-	
-	if(exp->type == EXPR_ACTION){
-		if(exp->action.expr1->type == EXPR_ACTION){
-			printf("1111111\r\n");
-			e1 = exprreduce(exp->action.expr1);			
-		}
-		else{			
-			printf("2222222222\r\n");
-			e1 = exp->action.expr1;
-		}
-		if(exp->action.expr2->type == EXPR_ACTION){		
-			printf("333333333\r\n");
-			e2 = exprreduce(exp->action.expr2);
-		}
-		else{			
-			printf("44444\r\n");
-			e2 = exp->action.expr2;
-		}
-
-		struct Expr *e3 = malloc(sizeof(struct Expr));
-		memset(e3,0,sizeof(struct Expr));
-		struct Token *t3 = malloc(sizeof(struct Token));
-		memset(t3,0,sizeof(struct Token));
-		t3->value_s = malloc(3);
-		memset(t3,0,3);
-		sprintf(t3->value_s,"t%d",newTemp());
-		
-		e3->type=EXPR_TAG;
-		e3->tag = t3;
-
-		printf("%s=",t3->value_s);
-		if(e1->tag->value_s !=NULL)
-			printf("%s",e1->tag->value_s);
-		else
-			printf("%d",e1->tag->value_i);
-		printf("%c",exp->action.op->tag);
-		if(e2->tag->value_s !=NULL)
-			printf("%s\r\n",e2->tag->value_s);
-		else
-			printf("%d\r\n",e2->tag->value_i);
-		return e3;
-	}else{
-		return exp;
-	}
-}
-
 
 void exprreduce1(char *pre,struct Expr *exp,int labelb){
 	struct Expr * e1,*e2;
